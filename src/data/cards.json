@@ -1,0 +1,82 @@
+[
+  {
+    "name": "HDFC Regalia",
+    "issuer": "HDFC Bank",
+    "fee": "2500",
+    "benefits": ["Travel", "Lounge", "Dining"],
+    "rewardRate": "4 points per Rs.150",
+    "eligibility": "Income 8L+",
+    "perks": "Airport Lounge, Dining Discounts",
+    "link": "#"
+  },
+  {
+    "name": "SBI Cashback Card",
+    "issuer": "SBI",
+    "fee": "499",
+    "benefits": ["Cashback", "Online Shopping"],
+    "rewardRate": "5% Cashback",
+    "eligibility": "Income 4L+",
+    "perks": "Amazon/Flipkart Cashback",
+    "link": "#"
+  },
+  {
+    "name": "ICICI Amazon Pay Card",
+    "issuer": "ICICI Bank",
+    "fee": "0",
+    "benefits": ["Online Shopping", "Cashback"],
+    "rewardRate": "5% on Amazon for Prime members",
+    "eligibility": "Income 3L+",
+    "perks": "No annual fee, Cashback on Amazon",
+    "link": "#"
+  },
+  {
+    "name": "Axis Bank Magnus",
+    "issuer": "Axis Bank",
+    "fee": "10000",
+    "benefits": ["Travel", "Lounge", "Dining", "Luxury"],
+    "rewardRate": "12 points per Rs.200",
+    "eligibility": "Income 18L+",
+    "perks": "International Lounge Access, Taj Vouchers",
+    "link": "#"
+  },
+  {
+    "name": "American Express Membership Rewards",
+    "issuer": "American Express",
+    "fee": "1500",
+    "benefits": ["Rewards", "Dining"],
+    "rewardRate": "1000 points on Rs.4000 spends per month",
+    "eligibility": "Income 6L+",
+    "perks": "Exclusive Amex Offers, Dining Benefits",
+    "link": "#"
+  },
+  {
+    "name": "IDFC FIRST Millennia Credit Card",
+    "issuer": "IDFC FIRST Bank",
+    "fee": "0",
+    "benefits": ["Cashback", "Dining", "Travel"],
+    "rewardRate": "Up to 10x reward points",
+    "eligibility": "Income 3L+",
+    "perks": "Lounge Access, Movie Discounts",
+    "link": "#"
+  },
+  {
+    "name": "Standard Chartered Super Value Titanium Card",
+    "issuer": "Standard Chartered",
+    "fee": "750",
+    "benefits": ["Fuel", "Utility Bills", "Cashback"],
+    "rewardRate": "5% Cashback on Fuel, Telecom, Utility",
+    "eligibility": "Income 6L+",
+    "perks": "Fuel Surcharge Waiver",
+    "link": "#"
+  },
+  {
+    "name": "YES Bank Prosperity Edge Credit Card",
+    "issuer": "YES Bank",
+    "fee": "1200",
+    "benefits": ["Dining", "Travel", "Rewards"],
+    "rewardRate": "8 reward points per Rs.200",
+    "eligibility": "Income 5L+",
+    "perks": "Lounge Access, Dining Offers",
+    "link": "#"
+  }
+]
