@@ -11,7 +11,8 @@ export async function POST(req: NextRequest) {
   try {
     const { preferences } = await req.json();
 
-    if (!preferences || !Array.isArray(preferences)) {
+    // ✅ FIX: Check if preferences is a valid object, not an array
+    if (!preferences || typeof preferences !== "object") {
       return NextResponse.json(
         { error: "Invalid preferences" },
         { status: 400 }
@@ -30,8 +31,8 @@ export async function POST(req: NextRequest) {
     const reply = completion.content[0]?.text.trim();
     console.log("Claude response:", reply);
     return NextResponse.json({ reply });
-  } catch (error) {
-    console.error(error);
+  } catch (error: any) {
+    console.error("API error:", error?.message || error);
     return NextResponse.json(
       { error: "Failed to fetch response" },
       { status: 500 }
