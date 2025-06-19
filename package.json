@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.54.0",
-    "@langchain/community": "^0.3.46",
     "@langchain/core": "^0.3.59",
     "langchain": "^0.3.28",
     "lucide-react": "^0.517.0",

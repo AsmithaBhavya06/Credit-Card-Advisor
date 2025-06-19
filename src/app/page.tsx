@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ChatPage from "./chat/page";
+import ChatPage from "./ChatPage";
 
 export default function Home() {
   return (
