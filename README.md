@@ -15,7 +15,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Working Demo
 
-[![Watch the demo](https://drive.google.com/file/d/1yoEsgij0y56pXBNhH6L4GMnkieS2ar1M/view?usp=sharing)
+[![Watch the demo](https://img.youtube.com/vi/drGBYgBLinY/0.jpg)](https://youtu.be/drGBYgBLinY)
 > Click the image above or [watch the demo video here](https://drive.google.com/file/d/1yoEsgij0y56pXBNhH6L4GMnkieS2ar1M/view?usp=sharing).
 
 # Credit Card Advisor
