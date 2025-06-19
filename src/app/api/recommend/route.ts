@@ -28,7 +28,11 @@ export async function POST(req: NextRequest) {
       messages: [{ role: "user", content: prompt }],
     });
 
-    const reply = completion.content[0]?.text.trim();
+    const contentArr = completion.content as unknown as string[];
+    const reply =
+      typeof contentArr[0] === "string"
+        ? contentArr[0].trim()
+        : "";
     console.log("Claude response:", reply);
     return NextResponse.json({ reply });
   } catch (error: any) {
