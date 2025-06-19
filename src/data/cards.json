@@ -7,6 +7,7 @@
     "rewardRate": "4 points per Rs.150",
     "eligibility": "Income 8L+",
     "perks": "Airport Lounge, Dining Discounts",
+    "image": "https://th.bing.com/th/id/OIP.eeCHng6bzHMhDec83Iy7uQHaEq?rs=1&pid=ImgDetMain&cb=idpwebpc2",
     "link": "#"
   },
   {
@@ -17,6 +18,7 @@
     "rewardRate": "5% Cashback",
     "eligibility": "Income 4L+",
     "perks": "Amazon/Flipkart Cashback",
+    "image": "https://miro.medium.com/v2/resize:fit:940/1*RMFvBmEdh6Hdoo6TXwWcKA.png",
     "link": "#"
   },
   {
@@ -27,6 +29,7 @@
     "rewardRate": "5% on Amazon for Prime members",
     "eligibility": "Income 3L+",
     "perks": "No annual fee, Cashback on Amazon",
+    "image": "https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/10/amazon_pay_icici_bank_credit_card-featured.png",
     "link": "#"
   },
   {
@@ -37,6 +40,7 @@
     "rewardRate": "12 points per Rs.200",
     "eligibility": "Income 18L+",
     "perks": "International Lounge Access, Taj Vouchers",
+    "image": "https://th.bing.com/th/id/OIP.Q1-P59bpugVFH2b0eZQKpwHaEL?rs=1&pid=ImgDetMain&cb=idpwebpc2",
     "link": "#"
   },
   {
@@ -47,6 +51,7 @@
     "rewardRate": "1000 points on Rs.4000 spends per month",
     "eligibility": "Income 6L+",
     "perks": "Exclusive Amex Offers, Dining Benefits",
+    "image": "https://cardinsider.com/wp-content/uploads/2021/07/American_Express_Membership_Rewards%C2%AE_Credit_Card.png",
     "link": "#"
   },
   {
@@ -57,6 +62,7 @@
     "rewardRate": "Up to 10x reward points",
     "eligibility": "Income 3L+",
     "perks": "Lounge Access, Movie Discounts",
+    "image": "https://hitricks.com/wp-content/uploads/2021/01/Screen-Shot-2021-01-15-at-12.45.21-PM.png",
     "link": "#"
   },
   {
@@ -67,6 +73,7 @@
     "rewardRate": "5% Cashback on Fuel, Telecom, Utility",
     "eligibility": "Income 6L+",
     "perks": "Fuel Surcharge Waiver",
+    "image": "https://cardmaven.in/wp-content/uploads/2022/11/Standard-Chartered-Super-Value-Titanium-Credit-Card-768x402.png",
     "link": "#"
   },
   {
@@ -77,6 +84,139 @@
     "rewardRate": "8 reward points per Rs.200",
     "eligibility": "Income 5L+",
     "perks": "Lounge Access, Dining Offers",
+    "image": "https://www.mymoneymantra.com/_next/image?url=https:%2F%2Fd1lt2ralzv8247.cloudfront.net%2Fimages%2Forigin%2FYBL_CC_High_Res_YP_Edge_c6fa16a8cf.png&w=1080&q=75",
+    "link": "#"
+  },
+  {
+    "name": "Kotak Indigo Ka-Ching Card",
+    "issuer": "Kotak Mahindra Bank",
+    "fee": "1500",
+    "benefits": ["Travel", "Flight Booking"],
+    "rewardRate": "3% on Indigo spends",
+    "eligibility": "Income 4.8L+",
+    "perks": "Priority Check-in, Free Add-ons",
+    "image": "https://richrupees.com/wp-content/uploads/2023/11/Kotak-6E-Rewards-Indigo-CC.png",
+    "link": "#"
+  },
+  {
+    "name": "RBL Shoprite Card",
+    "issuer": "RBL Bank",
+    "fee": "500",
+    "benefits": ["Cashback", "Shopping"],
+    "rewardRate": "2.5% Cashback",
+    "eligibility": "Income 3.5L+",
+    "perks": "Fuel Waiver, Welcome Gift",
+    "image": "https://cardinsider.com/wp-content/uploads/2021/07/RBL-ShopRite-Credit-Card.webp",
+    "link": "#"
+  },
+  {
+    "name": "Flipkart Axis Bank Credit Card",
+    "issuer": "Axis Bank",
+    "fee": "500",
+    "benefits": ["Cashback", "Shopping"],
+    "rewardRate": "5% on Flipkart, 1.5% on others",
+    "eligibility": "Income 3L+",
+    "perks": "Free OTT Subscriptions",
+    "image": "https://example.com/images/axis-flipkart.png",
+    "link": "#"
+  },
+  {
+    "name": "HDFC Millennia Credit Card",
+    "issuer": "HDFC Bank",
+    "fee": "1000",
+    "benefits": ["Cashback", "Dining"],
+    "rewardRate": "5% on online spends",
+    "eligibility": "Income 6L+",
+    "perks": "Lounge Access, EMI Offers",
+    "image": "https://example.com/images/hdfc-millennia.png",
+    "link": "#"
+  },
+  {
+    "name": "AU Bank Zenith Credit Card",
+    "issuer": "AU Small Finance Bank",
+    "fee": "799",
+    "benefits": ["Travel", "Lounge", "Dining"],
+    "rewardRate": "Up to 20 Reward Points",
+    "eligibility": "Income 7L+",
+    "perks": "Lounge Access, Insurance",
+    "image": "https://example.com/images/au-zenith.png",
+    "link": "#"
+  },
+  {
+    "name": "ICICI Coral Credit Card",
+    "issuer": "ICICI Bank",
+    "fee": "500",
+    "benefits": ["Rewards", "Dining", "Entertainment"],
+    "rewardRate": "2 points per Rs.100",
+    "eligibility": "Income 2.5L+",
+    "perks": "Buy 1 Get 1 Free Movie Tickets",
+    "image": "https://example.com/images/icici-coral.png",
+    "link": "#"
+  },
+  {
+    "name": "HSBC Platinum Credit Card",
+    "issuer": "HSBC",
+    "fee": "0",
+    "benefits": ["Dining", "Shopping"],
+    "rewardRate": "2 points per Rs.150",
+    "eligibility": "Income 4L+",
+    "perks": "Amazon Vouchers, Lounge Access",
+    "image": "https://example.com/images/hsbc-platinum.png",
+    "link": "#"
+  },
+  {
+    "name": "ICICI HPCL Coral Credit Card",
+    "issuer": "ICICI Bank",
+    "fee": "199",
+    "benefits": ["Fuel", "Rewards"],
+    "rewardRate": "2.5% cashback on HPCL",
+    "eligibility": "Income 2.4L+",
+    "perks": "Fuel Surcharge Waiver",
+    "image": "https://example.com/images/icici-hpcl.png",
+    "link": "#"
+  },
+  {
+    "name": "IndusInd Platinum Aura Edge",
+    "issuer": "IndusInd Bank",
+    "fee": "500",
+    "benefits": ["Rewards", "Dining"],
+    "rewardRate": "Up to 4x points",
+    "eligibility": "Income 3.5L+",
+    "perks": "Dining Discounts, Offers",
+    "image": "https://example.com/images/indusind-aura.png",
+    "link": "#"
+  },
+  {
+    "name": "Union Bank Rupay Select",
+    "issuer": "Union Bank of India",
+    "fee": "400",
+    "benefits": ["Rewards", "Utility"],
+    "rewardRate": "1 point per Rs.100",
+    "eligibility": "Income 2L+",
+    "perks": "Accident Insurance, Lounge Access",
+    "image": "https://example.com/images/union-rupay.png",
+    "link": "#"
+  },
+  {
+    "name": "Bank of Baroda Premier Credit Card",
+    "issuer": "BOB",
+    "fee": "1000",
+    "benefits": ["Rewards", "Travel", "Dining"],
+    "rewardRate": "5X Reward Points",
+    "eligibility": "Income 5L+",
+    "perks": "Lounge Access, EMI Offers",
+    "image": "https://example.com/images/bob-premier.png",
+    "link": "#"
+  },
+  {
+    "name": "Federal Bank Signet Credit Card",
+    "issuer": "Federal Bank",
+    "fee": "0",
+    "benefits": ["Cashback", "Rewards"],
+    "rewardRate": "Up to 3x rewards",
+    "eligibility": "Income 3L+",
+    "perks": "Free Lounge, EMI Facility",
+    "image": "https://example.com/images/federal-signet.png",
     "link": "#"
   }
 ]

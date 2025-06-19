@@ -1,47 +1,75 @@
-export function getRecommendation(answers: { [key: string]: string }) {
-  // Handle manual prompt
-  if (answers.prompt) {
-    const prompt = answers.prompt.toLowerCase();
+import cards from '../data/cards.json';
 
-    // Check for specific card names
-    if (prompt.includes("idfc")) {
-      return "We recommend: IDFC FIRST Millennia Credit Card – great for rewards on dining, travel, and online shopping with no annual fee!";
-    }
-    if (prompt.includes("regalia")) {
-      return "We recommend: HDFC Regalia Credit Card – ideal for travel and lounge access.";
-    }
-    if (prompt.includes("elite")) {
-      return "We recommend: SBI Elite Credit Card – premium benefits including lounge access and travel perks.";
-    }
-    if (prompt.includes("amazon") || prompt.includes("icici")) {
-      return "We recommend: Amazon Pay ICICI Credit Card – best for cashback on Amazon purchases.";
-    }
-    if (prompt.includes("flipkart") || prompt.includes("axis")) {
-      return "We recommend: Flipkart Axis Bank Credit Card – perfect for shopping on Flipkart and partner stores.";
-    }
-    if (prompt.includes("fuel")) {
-      return "We recommend: IndianOil Citi Credit Card – excellent savings on fuel purchases.";
-    }
+// Card and Answers types
+interface Card {
+  name: string;
+  issuer: string;
+  fee: string;
+  benefits: string[];
+  rewardRate: string;
+  eligibility: string;
+  perks: string;
+  image: string;
+  link: string;
+  estimatedReward?: number;
+}
 
-    // Fallback
-    return "Sorry, no matching card found for your prompt.";
+interface Answers {
+  prompt?: string;
+  creditScore?: string;
+  spendingType?: string;
+  benefit?: string;
+  monthlySpend?: string;
+}
+
+// Helper: Estimate yearly reward (very basic simulation)
+function estimateReward(card: Card, answers: Answers): number {
+  const spend = parseInt(answers.monthlySpend || '10000', 10); // default Rs. 10,000/month
+  let reward = 0;
+  if (card.rewardRate.includes('%')) {
+    const match = card.rewardRate.match(/(\d+(?:\.\d+)?)%/);
+    if (match) reward = spend * 12 * (parseFloat(match[1]) / 100);
+  } else if (card.rewardRate.match(/points per Rs\.(\d+)/)) {
+    const match = card.rewardRate.match(/(\d+) points per Rs\.(\d+)/);
+    if (match) reward = spend * 12 / parseInt(match[2]) * parseInt(match[1]);
+  } else if (card.rewardRate.match(/on Amazon/)) {
+    reward = spend * 12 * 0.05;
+  }
+  return Math.round(reward);
+}
+
+export function getRecommendation(answers: Answers) {
+  let filtered: Card[] = cards as Card[];
+  if (answers.creditScore) {
+    const score = parseInt(answers.creditScore, 10);
+    filtered = filtered.filter(card => {
+      if (score < 700) return !card.eligibility || !card.eligibility.includes('8L') && !card.eligibility.includes('18L');
+      return true;
+    });
+  }
+  if (answers.spendingType) {
+    filtered = filtered.filter(card => card.benefits && card.benefits.includes(answers.spendingType!));
+  }
+  if (answers.benefit) {
+    filtered = filtered.filter(card => card.benefits && card.benefits.includes(answers.benefit!));
   }
 
-  // Structured answers logic
-  if (
-    answers.spendingType === "Travel" &&
-    answers.benefit === "Lounge Access"
-  ) {
-    return "We recommend: HDFC Regalia or SBI Elite for travel and lounge access!";
-  }
-  if (
-    answers.spendingType === "Online Shopping" &&
-    answers.benefit === "Cashback"
-  ) {
-    return "We recommend: Amazon Pay ICICI or Flipkart Axis for online shopping cashback!";
-  }
-  if (answers.spendingType === "Fuel") {
-    return "We recommend: IndianOil Citi Credit Card for fuel savings!";
-  }
+  filtered = filtered.map(card => ({
+    ...card,
+    estimatedReward: estimateReward(card, answers)
+  })).sort((a, b) => (b.estimatedReward || 0) - (a.estimatedReward || 0));
 
+  return filtered.slice(0, 5).map(card => ({
+    name: card.name,
+    issuer: card.issuer,
+    fee: card.fee,
+    benefits: card.benefits,
+    rewardRate: card.rewardRate,
+    eligibility: card.eligibility,
+    perks: card.perks,
+    image: card.image,
+    link: card.link,
+    estimatedReward: card.estimatedReward,
+    rewardSimulation: `You could earn Rs. ${(card.estimatedReward || 0).toLocaleString()}/year cashback/rewards`
+  }));
 }
