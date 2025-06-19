@@ -18,6 +18,57 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 [![Watch the demo](https://drive.google.com/file/d/1yoEsgij0y56pXBNhH6L4GMnkieS2ar1M/view?usp=sharing)
 > Click the image above or [watch the demo video here](https://drive.google.com/file/d/1yoEsgij0y56pXBNhH6L4GMnkieS2ar1M/view?usp=sharing).
 
+# Credit Card Advisor
+
+...
+
+## Agent Flow
+
+The agent (AI assistant) guides the user through a series of questions to collect their preferences and then provides personalized credit card recommendations. The flow is as follows:
+
+1. **User Interaction**:  
+   The user is presented with a sequence of questions (see [`questions`](src/components/ChatBox.tsx)) about their spending habits, income, preferred benefits, bank preference, credit score, and existing cards.
+2. **Answer Collection**:  
+   Each answer is stored in the `answers` state.
+3. **Recommendation Trigger**:  
+   After all questions are answered, the collected preferences are sent to the backend API ([`/api/recommend`](src/app/api/recommend/route.ts)).
+4. **AI Processing**:  
+   The backend uses the [`buildPrompt`](src/lib/promptBuilder.ts) function to generate a prompt for the Anthropic Claude API, which returns a natural language recommendation.
+5. **Result Display**:  
+   The frontend parses and displays the recommended cards, allowing users to compare and view details.
+
+## Prompt Design
+
+The prompt sent to the AI model is carefully constructed to maximize relevant and actionable recommendations. The prompt template (see [`buildPrompt`](src/lib/promptBuilder.ts)) includes:
+
+- A summary of the user's preferences:
+  - Spending Type
+  - Income Range
+  - Preferred Benefit
+  - Bank Preference
+- A list of available cards with their benefits and eligibility.
+- A direct instruction to recommend 3 cards and provide reasons for each.
+
+**Example Prompt:**
+```
+Based on the following user preferences:
+- Spending Type: Travel
+- Income Range: 6L-12L
+- Preferred Benefit: Lounge Access
+- Bank Preference: HDFC
+
+Which 3 credit cards from the list below would you recommend? Provide reasons for each.
+
+Available cards:
+Name: HDFC Regalia, Benefits: Lounge Access, Dining Discounts, Bank: HDFC, Income Eligibility: 6L+
+Name: SBI Cashback, Benefits: Cashback on online shopping, Bank: SBI, Income Eligibility: 3L+
+...
+```
+
+This approach ensures the AI has all necessary context to make informed, user-specific recommendations.
+
+---
+
 ## Getting Started
 
 First, run the development server:
