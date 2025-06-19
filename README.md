@@ -1,4 +1,22 @@
+# Credit Card Advisor
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Overview
+
+**Credit Card Advisor** is an AI-powered web application that provides personalized credit card recommendations for Indian users based on their spending habits and preferences.
+
+## Features
+
+- Interactive chat interface for collecting user preferences
+- AI-driven recommendations using Anthropic Claude API
+- Card comparison and summary view
+- Responsive, modern UI
+
+## Working Demo
+
+[![Watch the demo](https://drive.google.com/file/d/1yoEsgij0y56pXBNhH6L4GMnkieS2ar1M/view?usp=sharing)
+> Click the image above or [watch the demo video here](https://drive.google.com/file/d/1yoEsgij0y56pXBNhH6L4GMnkieS2ar1M/view?usp=sharing).
 
 ## Getting Started
 
@@ -33,4 +51,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

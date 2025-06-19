@@ -1,6 +1,4 @@
 import cards from '../data/cards.json';
-
-// Card and Answers types
 interface Card {
   name: string;
   issuer: string;

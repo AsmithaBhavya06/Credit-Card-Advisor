@@ -1,4 +1,3 @@
-// lib/promptBuilder.ts
 export function buildPrompt(preferences: Record<string, string>, cards: any[]) {
   const { spendingType, income, benefit, bank } = preferences;
 
